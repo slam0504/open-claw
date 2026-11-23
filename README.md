@@ -29,7 +29,15 @@ OpenClaw 負責派工，Claude Agent ACP 提供代理工作流程，Qwen 負責�
 
 ## 安裝與執行
 
-這個 repo 目前提供驗收資料與建置流程，**不含可直接安裝的套件或啟動器**。想在自己的 Mac 上評估：
+這個 repo 提供驗收資料、建置流程及可執行的唯讀預檢。**尚未提供可直接安裝的新機套件。**
+
+```sh
+bash scripts/preflight.sh
+```
+
+[腳本使用說明與驗收限制](docs/scripts.md)。`run-smoke-test.sh` 是驗收入口，目前欠缺經核准的新機套件，會回報阻擋，不會啟動或假報通過。
+
+要在自己的 Mac 上評估：
 
 1. 從[環境盤點與建置流程](docs/macos-runbook.md)開始，確認 Apple Silicon、記憶體、磁碟和本機引擎。實測版本與限制也記在這份文件。
 2. 規劃目標機專用的設定與封存；不要複製原機的帳冊、憑證或啟動指令。
@@ -40,6 +48,8 @@ OpenClaw 負責派工，Claude Agent ACP 提供代理工作流程，Qwen 負責�
 - [`docs/phase1-results.md`](docs/phase1-results.md)：原機實測、證據與已知限制。
 - [`docs/macos-runbook.md`](docs/macos-runbook.md)：環境盤點、建置、驗收、回復與可交給 AI 的提示詞。
 - [`docs/architecture.png`](docs/architecture.png)：本機派工與驗收流程圖。
+- [`scripts/`](scripts)：預檢和驗收入口。
+- [`tests/`](tests)：離線測試。
 
 ## 授權
 
