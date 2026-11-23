@@ -1,0 +1,3 @@
+interface:
+  display_name: "Verified Local Deployment"
+  short_description: "Build and verify repeatable local deployments"

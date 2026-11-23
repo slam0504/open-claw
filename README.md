@@ -43,6 +43,10 @@ bash scripts/preflight.sh
 2. 規劃目標機專用的設定與封存；不要複製原機的帳冊、憑證或啟動指令。
 3. 等新機版本備妥並完成唯讀預檢後，再由本人於終端機啟動一次虛構驗收。
 
+### 給 Codex 的部署 Skill
+
+本 repo 收錄 [可重現的本機部署與驗收 Skill](.agents/skills/verified-local-deployment/SKILL.md)。在 Codex 可用 `$verified-local-deployment` 呼叫，用於接續部署、做唯讀預檢、區分實測與模擬，及交接待辦。Skill 不會替代安裝套件或實機啟動核准。
+
 ## 資料夾結構
 
 - [`docs/phase1-results.md`](docs/phase1-results.md)：原機實測、證據與已知限制。
